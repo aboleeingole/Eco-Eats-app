@@ -13,7 +13,7 @@ import {
 import React, { useState } from "react";
 import { Fontisto } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen = () => {
@@ -25,6 +25,7 @@ const LoginScreen = () => {
       <SafeAreaView style={styles.container}>
         <KeyboardAvoidingView>
           <View style={{ alignItems: "center" }}>
+          
             <View>
               <Text style={styles.head}>Sign In</Text>
             </View>
@@ -85,10 +86,16 @@ const LoginScreen = () => {
 
             <View style={styles.gf}>
               <TouchableOpacity>
-                <View style={styles.gficon}><AntDesign name="google" size={24} color="green" /></View>
+                <View style={styles.gficon}>
+                  <AntDesign name="google" size={24} color="green" />
+                </View>
               </TouchableOpacity>
             </View>
-            <View style={hr80}></View>
+
+            <Text onPress={()=> navigation.navigate("register")}>
+              Don't have an account? 
+              <Text styles={{color: "green"}}> Register!</Text>
+            </Text>
           </View>
         </KeyboardAvoidingView>
       </SafeAreaView>
@@ -115,6 +122,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 150,
   },
+  
   head: {
     fontSize: 30,
     fontWeight: "bold",
@@ -152,10 +160,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     fontSize: 20,
   },
-  gf:{
-    alignItems:"center",
+  gf: {
+    alignItems: "center",
   },
-  gficon:{
+  gficon: {
     backgroundColor: "white",
     width: 50,
     margin: 10,
@@ -164,10 +172,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     elevation: 20,
   },
-  line:{
-    width: "80%",
-    borderBottomColor: "#E0E0E0",
-    borderBottomWidth: 1,
-    marginVertical: 20,
-  },
+  signup:{
+    color: "blue",
+  }
 });

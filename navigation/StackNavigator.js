@@ -11,9 +11,21 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="Welcome" component={WelcomeScreen} options={{headerShown: false}}/>
-      <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}}/>
-      <Stack.Screen name="Register" component={RegisterScreen} options={{headerShown: false}}/>
+        <Stack.Screen
+          name="welcome"
+          component={WelcomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="register"
+          component={RegisterScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
