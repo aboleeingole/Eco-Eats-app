@@ -31,7 +31,7 @@ const RegisterScreen = () => {
       alert("Submitting data...");
 
       const response = await axios.post(
-        "http://192.168.1.8:8000/register",
+        "http://192.168.1.14:8000/register",
         {
           name,
           email,

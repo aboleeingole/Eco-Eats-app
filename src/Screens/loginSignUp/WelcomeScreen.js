@@ -5,21 +5,24 @@ import {
   View,
   Image,
   ImageBackground,
+  ScrollView,
 } from "react-native";
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../../assets/logo.png";
 const StartScreen = ({navigation}) => {
   return (
+    <ScrollView>
     <ImageBackground
-      source={require("../assets/try.png")} 
+      source={require("../../../assets/bgh.png")} 
       style={{ flex: 1, alignItems: "center" }}
     >
       <View style={styles.container}>
-        <Text style={styles.title}>WELCOME TO</Text>
-        <Text style={styles.title}>ECO EATS</Text>
-        <View style={styles.logoout}>
+      <View style={styles.logoout}>
           <Image source={logo} style={styles.logo} />
         </View>
+        <Text style={styles.title1}>WELCOME TO</Text>
+        <Text style={styles.title2}>ECO EATS</Text>
+        
 
         <Text style={styles.text}>
           Find the best food around you at lowest price.
@@ -35,6 +38,7 @@ const StartScreen = ({navigation}) => {
         </View>
       </View>
     </ImageBackground>
+    </ScrollView>
   );
 };
 
@@ -45,30 +49,41 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontWeight: "bold",
-    fontSize: 50,
-    color: "white",
-    textAlign: "center",
-    marginVertical: 10,
-    fontWeight: "200",
   },
   logoout: {
-    width: "80%",
-    height: "30%",
+    width: "40%",
+    height: "15%",
     alignItems: "center",
+    marginTop: 20,
   },
   logo: {
     width: "100%",
     height: "100%",
   },
+  title1: {
+    fontSize: 40,
+    color: "black",
+    textAlign: "center",
+    marginVertical: 10,
+    fontWeight:"bold",
+  },
+  title2: {
+    fontSize: 40,
+    color: "black",
+    textAlign: "center",
+    marginVertical: 10,
+    fontWeight:"bold",
+    marginTop: -15,
+  },
+  
   text: {
     fontSize: 18,
+    backgroundColor: "white",
     width: "80%",
-    color: "white",
+    color: "black",
     textAlign: "center",
+    marginVertical: 300,
+    fontWeight: "900"
   },
   btnout: {
     flexDirection: "row",
@@ -77,7 +92,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "green",
     textAlign: "center",
-    marginVertical: 30,
+    marginVertical: -550,
     marginHorizontal: 10,
     fontWeight: "700",
     backgroundColor: "white",

@@ -75,7 +75,7 @@ const LoginScreen = () => {
               </View>
 
               <Pressable style={styles.btn}>
-                <Text style={styles.btntext}>Login</Text>
+                <Text style={styles.btntext} onPress={()=> navigation.navigate("home")}>Login</Text>
               </Pressable>
             </View>
             <View>
