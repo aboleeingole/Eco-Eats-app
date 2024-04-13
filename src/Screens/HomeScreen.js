@@ -10,6 +10,7 @@ import React from "react";
 import HomeHeaderNav from "../components/HomeHeaderNav";
 import { Feather } from "@expo/vector-icons";
 import Categories from "../components/Categories";
+import Slider from "../components/Slider";
 
 const HomeScreen = () => {
   return (
@@ -26,6 +27,7 @@ const HomeScreen = () => {
         <TextInput placeholder="Search" />
       </View>
       <Categories/>
+      <Slider/>
     </View>
   );
 };

@@ -11,7 +11,6 @@ import React from "react";
 import logo from "../../../assets/logo.png";
 const StartScreen = ({navigation}) => {
   return (
-    <ScrollView>
     <ImageBackground
       source={require("../../../assets/bgh.png")} 
       style={{ flex: 1, alignItems: "center" }}
@@ -38,7 +37,6 @@ const StartScreen = ({navigation}) => {
         </View>
       </View>
     </ImageBackground>
-    </ScrollView>
   );
 };
 
@@ -82,7 +80,7 @@ const styles = StyleSheet.create({
     width: "80%",
     color: "black",
     textAlign: "center",
-    marginVertical: 300,
+    marginVertical: 370,
     fontWeight: "900"
   },
   btnout: {

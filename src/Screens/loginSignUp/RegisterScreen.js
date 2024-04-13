@@ -27,6 +27,28 @@ const RegisterScreen = () => {
   const navigation = useNavigation();
   const handleRegister = async (e) => {
     e.preventDefault();
+
+    if (!name || !email || !phoneNumber || !password) {
+      Alert.alert("Error", "Please fill in all fields.");
+      return;
+    }
+  
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      Alert.alert("Error", "Please enter a valid 10-digit phone number.");
+      return;
+    }
+  
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      Alert.alert("Error", "Please enter a valid email address.");
+      return;
+    }
+  
+    if (password.length < 6) {
+      Alert.alert("Error", "Password must be at least 6 characters long.");
+      return;
+    }
+  
+
     try {
       alert("Submitting data...");
 
@@ -46,6 +68,7 @@ const RegisterScreen = () => {
       );
 
       console.log(response.data);
+      Alert.alert("Error", "Registration Sucessful");
     } catch (error) {
       console.error("Error registering user:", error);
       Alert.alert("Error", "Failed to register. Please try again later.");
